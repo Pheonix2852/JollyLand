@@ -1,0 +1,469 @@
+/*------------------General Styling------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kalnia';
+    color: #fff;
+}
+
+*::selection{
+    background: white;
+    color: #ff4500;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+/*------------------Scrolling Bar for Page------------------*/
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: #ff4500;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+/*------------------Cursor------------------*/
+
+.cursor{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #ff4500;
+  position: fixed;
+  z-index: 9;
+}
+
+/*------------------Back Cursor------------------*/
+
+.cursor-blur {
+  height: 250px;
+  width: 250px;
+  background-color: rgba(193, 65, 30, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(40px);
+  z-index: 9;
+}
+
+/*------------------Navbar------------------*/
+
+.navbar {
+  height: 130px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  gap: 50px;
+  position: fixed;
+  justify-content: flex-start;
+  z-index: 999;
+}
+
+.navbar img {
+  height: 6vw;
+}
+
+.navbar h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.15vw;
+}
+
+/*------------------Main Page------------------*/
+
+.main-vdo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: fixed;
+}
+
+.main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+/*------------------Page 1------------------*/
+
+.page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+
+/*------------------Page 1(Main Heading)------------------*/
+
+.page1 h1 {
+  font-family: 'Rubik Doodle Triangles';
+  font-size: 7.5vw;
+  font-weight: 400;
+  position: relative;
+}
+
+/*------------------Page 1(Main Heading  Second Layer)------------------*/
+
+.page1 h1::before {
+  content: "EAT. DRINK. ENJOY.";
+  position: absolute;
+  color: #000;
+  top: -5px;
+  left: -5px;
+  -webkit-text-stroke: 1.5px #ff4500;
+  z-index: -1;
+}
+
+/*--------------------------------------------------------------------*/
+
+.page1 h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.page1 p {
+  font-size: 1.2vw;
+  font-weight: 500;
+  width: 40%;
+}
+
+/*------------------Page 2------------------*/
+
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+/*------------------Page 2(Infinite Marquee Scroll)------------------*/
+
+.scroller {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
+}
+
+.scroller h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  font-family: gilroy;
+  margin-right: 20px;
+  transition: all linear 0.3s;
+  color: #000;
+  -webkit-text-stroke: 2px #ffffff;
+}
+
+.scroller h4:hover {
+  color: #ff4500;
+  -webkit-text-stroke: 2px #000;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.about-us {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  justify-content: space-around;
+}
+
+.about-us img {
+  height: 220px;
+  width: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.about-us-info {
+  width: 50%;
+  text-align: center;
+}
+
+.about-us-info h3 {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.about-us-info p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.cards-container{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.card{
+  height: 80%;
+  width: 28%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+}
+
+#card-1{
+  background-image: url(Assets/Ride1.jpg)
+}
+
+#card-2{
+  background-image: url(Assets/Ride2.jpg);
+}
+
+#card-3{
+  background-image: url(Assets/Ride3.jpg);
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: #ff4500;
+  padding: 30px;
+  padding-top: 150px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+
+.card:hover .overlay{
+  opacity: 1;
+}
+
+.overlay h4{
+  color: #000;
+  font-size:35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.overlay p{
+  color: #000;
+  font-size: 18px;
+}
+
+.green-div{
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left bottom, orange, red);
+}
+
+.green-div h4{
+  width: 75%;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*------------------Page 3------------------*/
+
+.page3{
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page3 > p{
+  font-size: 25px;
+  width: 55%;
+  text-align: center;
+  line-height: 35px;
+}
+
+.page3 img{
+  position: absolute;
+  height: 60px;
+  color: white;
+}
+
+.page3 #colon1{
+  left: 15%;
+  top: 25%;
+}
+
+.page3 #colon2{
+  bottom: 27%;
+  right: 15%;
+}
+
+/*------------------Page 4------------------*/
+
+.page4{
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+}
+
+.elem {
+  height: 70%;
+  width: 26%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.elem h2 {
+  height: 100%;
+  width: 100%;
+  background-color: #ff4500;
+  display: flex;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+  font-size: 2vw;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+}
+
+.elem video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+
+.elem:hover h2 {
+  color: #fff;
+  background-color: transparent;
+}
+
+.elem:hover video {
+  scale: 1;
+}
+
+.page4 h1 {
+  text-align: center;
+  font-size: 6vw;
+  position: absolute;
+  top: -15%;
+  font-weight: 900;
+  font-family: gilroy;
+  color: #000;
+  -webkit-text-stroke: 2px #fff;        /*------------------Helps in stroke around each letter------------------*/
+}
+
+/*------------------Footer------------------*/
+
+.footer {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, orange 0%, red 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+
+.footer > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+.f1 img {
+  height: 175px;
+}
+
+.f1,.f2,.f3,.f4 {
+  width: fit-content;
+  position: relative;
+  z-index: 99;
+}
+
+.f2 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.f3 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.f3 h3:hover{
+  cursor: pointer;
+}
+
+.f2 h3:hover{
+  cursor: pointer;
+}
+
+.f4 h4 {
+  font-size: 1vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
