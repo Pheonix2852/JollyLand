@@ -1,4 +1,4 @@
-# 🎡 Interactive Amusement Park Website
+# 🎡 JolllyLand
 
 An interactive and visually dynamic amusement park website built using **HTML**, **CSS**, and **JavaScript**. This project showcases a series of scroll-triggered animations and 3D effects designed to engage users. 
 
